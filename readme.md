@@ -2,7 +2,14 @@
 
 # snolpkg
 
-signed native module installer for [SNOLC](https://github.com/owenewans/snolc).
+signed native module installer for [snolc](https://github.com/owenewans/snolc).
+
+[![ci](https://github.com/owenewans/snolpkg/actions/workflows/ci.yml/badge.svg?branch=dev)](https://github.com/owenewans/snolpkg/actions/workflows/ci.yml)
+[![scorecard](https://api.securityscorecards.dev/projects/github.com/owenewans/snolpkg/badge)](https://securityscorecards.dev/viewer/?uri=github.com/owenewans/snolpkg)
+[![last commit](https://img.shields.io/github/last-commit/owenewans/snolpkg?logo=github)](https://github.com/owenewans/snolpkg/commits/dev)
+[![license](https://img.shields.io/github/license/owenewans/snolpkg)](LICENSE)
+
+<a href="https://count.owenewans.org/owenewans/snolpkg?theme=moebooru-h&notitle"><img src="https://count.owenewans.org/owenewans/snolpkg?theme=moebooru-h&notitle" alt="repository views"></a>
 
 `rust` `packages` `ed25519`
 
@@ -30,8 +37,8 @@ export SNOLPKG_ROOT="$HOME/.local/share/snolc/packages"
 ```sh
 snolpkg add -b https://github.com/owenewans/snolc-modules.git carrier-tcp
 snolpkg add -s https://github.com/owenewans/snolc-modules.git carrier-tcp
-snolpkg template owenewans/carrier-tcp@0.0.2 --role server --output modules/tcp.toml
-snolpkg del owenewans/carrier-tcp@0.0.2
+snolpkg template owenewans/carrier-tcp@VERSION --role server --output modules/tcp.toml
+snolpkg del owenewans/carrier-tcp@VERSION
 ```
 
 Binary mode verifies the source manifest signature, artifact byte count and
