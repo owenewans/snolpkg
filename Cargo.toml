@@ -1,0 +1,30 @@
+[package]
+name = "snolpkg"
+description = "signed native module installer for snolc"
+version = "0.0.2"
+edition = "2024"
+rust-version = "1.98.1"
+authors = ["Owen Ewans <owenewans@tuta.io>"]
+license = "Unlicense"
+repository = "https://github.com/owenewans/snolpkg"
+build = "build.rs"
+
+[dependencies]
+ed25519-dalek = "=3.0.0"
+flate2 = "=1.1.2"
+gix = { version = "=0.87.1", default-features = false, features = ["blocking-http-transport-reqwest-rust-tls", "revision", "sha1", "worktree-mutation"] }
+reqwest = { version = "=0.13.5", default-features = false, features = ["blocking", "rustls"] }
+serde = { version = "=1.0.229", features = ["derive"] }
+sha2 = "=0.10.9"
+tar = "=0.4.46"
+thiserror = "=2.0.20"
+toml = "=1.1.6"
+
+[dev-dependencies]
+ed25519-dalek = { version = "=3.0.0", features = ["rand_core"] }
+
+[profile.release]
+codegen-units = 1
+lto = "thin"
+panic = "unwind"
+strip = "symbols"

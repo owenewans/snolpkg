@@ -1,0 +1,22 @@
+[package]
+name = "snolpkg-fuzz"
+version = "0.0.2"
+publish = false
+edition = "2024"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "=0.4.13"
+snolpkg = { version = "=0.0.2", path = ".." }
+
+[[bin]]
+name = "archive-path"
+path = "fuzz_targets/archive_path.rs"
+test = false
+doc = false
+bench = false
+
+[workspace]
+members = ["."]
