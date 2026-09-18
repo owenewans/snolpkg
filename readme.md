@@ -4,11 +4,6 @@
 
 signed native module installer for [snolc](https://github.com/owenewans/snolc).
 
-[![ci](https://github.com/owenewans/snolpkg/actions/workflows/ci.yml/badge.svg?branch=dev)](https://github.com/owenewans/snolpkg/actions/workflows/ci.yml)
-[![scorecard](https://api.securityscorecards.dev/projects/github.com/owenewans/snolpkg/badge)](https://securityscorecards.dev/viewer/?uri=github.com/owenewans/snolpkg)
-[![last commit](https://img.shields.io/github/last-commit/owenewans/snolpkg?logo=github)](https://github.com/owenewans/snolpkg/commits/dev)
-[![license](https://img.shields.io/github/license/owenewans/snolpkg)](LICENSE)
-
 <a href="https://count.owenewans.org/owenewans/snolpkg?theme=moebooru-h&notitle"><img src="https://count.owenewans.org/owenewans/snolpkg?theme=moebooru-h&notitle" alt="repository views"></a>
 
 `rust` `packages` `ed25519`
